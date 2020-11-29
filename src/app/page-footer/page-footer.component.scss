@@ -1,4 +1,6 @@
+@import '/src/app/variables';
+
 .footer-container {
-    color: white;
+    color: $light-text-grey;
     text-align: center;
 }

@@ -1,6 +1,21 @@
 @import '../section-styles.scss';
 
-.card {
-    width: 50%;
-    margin: 2em auto;
+.main-section-container {
+    display: flex;
+    h3 {
+        text-align: center;;
+    }
+
+    .experience-container {
+        width: 67%;
+        margin: 0 2em;
+    }
+
+    .projects-container {
+        width: 33%;
+    }
+
+    .card {
+        margin: 1em 0;
+    }
 }

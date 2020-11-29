@@ -1,3 +1,5 @@
+@import '/src/app/variables';
+
 nav.navbar {
     padding: 2em 5em;
     z-index: 999;
@@ -11,23 +13,23 @@ nav.navbar {
         margin: 0 1.5em;
     
         .nav-link {
-            color: #777;
+            color: $dark-text-grey;
     
             &:hover,
             &:focus {
-                color: white;
+                color: $bg-color-light;
                 text-decoration: none;
             }
         }
 
         &.active {
             .nav-link {
-                color: white;
+                color: $bg-color-light;
             }
         }
     }
 
     &.navbar-dark.bg-dark {
-        background-color: black !important; // override bootstrap
+        background-color: $bg-color-dark !important; // override bootstrap
     }
 }
