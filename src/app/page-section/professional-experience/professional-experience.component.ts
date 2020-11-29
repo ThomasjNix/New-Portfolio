@@ -11,5 +11,4 @@ export class ProfessionalExperienceComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

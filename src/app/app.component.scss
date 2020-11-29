@@ -1,0 +1,18 @@
+.page-container {
+    .header-container {
+        height: 10vh;
+    }
+
+    .main-page-section {
+        height: 80vh;
+        overflow-y: scroll;
+    }
+
+    .footer-container {
+        height: 10vh;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        background-color: black;
+    }
+}

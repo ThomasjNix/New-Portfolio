@@ -1,0 +1,25 @@
+nav.navbar {
+    padding: 2em 5em;
+
+    .navbar-brand {
+        margin-left: 1.5em;
+    }
+
+    .nav-item {
+        font-size: 1.25em;
+        margin: 0 1.5em;
+    
+        a {
+            color: #777;
+    
+            &:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.navbar-dark.bg-dark {
+        background-color: black !important; // override bootstrap
+    }
+}

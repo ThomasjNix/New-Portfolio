@@ -1,10 +1,14 @@
-<div class="header-container">
-  <app-page-header></app-page-header>
+<div class="page-container">
+  <div class="header-container">
+    <app-page-header></app-page-header>
+  </div>
+  
+  <div class="main-page-section">
+    <!-- Section routing -->
+    <router-outlet></router-outlet>
+  </div>
+  
+  <footer class="footer-container">
+    <app-page-footer></app-page-footer>
+  </footer>
 </div>
-
-<!-- Section routing -->
-<router-outlet></router-outlet>
-
-<footer class="footer-container">
-  <app-page-footer></app-page-footer>
-</footer>

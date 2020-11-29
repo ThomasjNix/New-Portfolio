@@ -1,13 +1,21 @@
-<div class="header-container">
-
-    <a routerLink="/" class="header-container-routing-link">About Me</a>
-    <a routerLink="/professional-experience" class="header-container-routing-link">Professional Experience</a>
-    
-    <!-- Portrait -->
-    <img id="portrait" src="https://via.placeholder.com/350x350" alt="Thomas Nix Portrait">
-
-    <a routerLink="/hobbies" class="header-container-routing-link">Hobbies</a>
-    <a routerLink="/contact-and-resume" class="header-container-routing-link">Contact and Resume</a>
-
-</div>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/images/thomasnix_logo.png" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a routerLink="" class="routing-link">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/professional-experience" class="routing-link">Experience</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/contact-and-resume" class="routing-link">Contact and Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
