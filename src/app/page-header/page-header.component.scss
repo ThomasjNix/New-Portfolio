@@ -13,7 +13,8 @@ nav.navbar {
         a {
             color: #777;
     
-            &:hover {
+            &:hover,
+            &:focus {
                 color: white;
                 text-decoration: none;
             }
