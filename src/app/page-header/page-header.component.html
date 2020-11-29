@@ -7,14 +7,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-            <a routerLink="" class="routing-link">About Me</a>
+        <li class="nav-item" [ngClass]="{'active': activeUrl === ''}">
+            <a routerLink="" class="nav-link">About Me</a>
         </li>
-        <li class="nav-item">
-            <a routerLink="/professional-experience" class="routing-link">Experience</a>
+        <li class="nav-item" [ngClass]="{'active': activeUrl === 'professional-experience'}">
+            <a routerLink="/professional-experience" class="nav-link">Experience</a>
         </li>
-        <li class="nav-item">
-            <a routerLink="/contact-and-resume" class="routing-link">Contact and Resume</a>
+        <li class="nav-item" [ngClass]="{'active': activeUrl === 'contact-and-resume'}">
+            <a routerLink="/contact-and-resume" class="nav-link">Contact and Resume</a>
         </li>
       </ul>
     </div>

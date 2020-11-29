@@ -10,13 +10,19 @@ nav.navbar {
         font-size: 1.25em;
         margin: 0 1.5em;
     
-        a {
+        .nav-link {
             color: #777;
     
             &:hover,
             &:focus {
                 color: white;
                 text-decoration: none;
+            }
+        }
+
+        &.active {
+            .nav-link {
+                color: white;
             }
         }
     }
