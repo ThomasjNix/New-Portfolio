@@ -1,1 +1,28 @@
 @import '../section-styles.scss';
+
+.portrait {
+    display: block;
+    margin: 0 auto;
+    width: 25vw;
+}
+
+.heading {
+    margin-bottom: 2em;
+    text-align: center;
+    width: 100%;
+}
+
+.row {
+    padding: 1em 0;
+}
+
+.image-set {
+    display: flex;
+    margin: 0 auto;
+
+    img {
+        flex: 1;
+        margin: 0 2em;
+        width: 4em;
+    }
+}
