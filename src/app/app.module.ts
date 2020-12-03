@@ -7,6 +7,7 @@ import { PageFooterComponent } from './page-footer/page-footer.component';
 import { AboutMeComponent } from './page-section/about-me/about-me.component';
 import { ProfessionalExperienceComponent } from './page-section/professional-experience/professional-experience.component';
 import { ContactAndResumeComponent } from './page-section/contact-and-resume/contact-and-resume.component';
+import { ContactFormComponent } from './page-section/contact-and-resume/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContactAndResumeComponent } from './page-section/contact-and-resume/con
     PageFooterComponent,
     AboutMeComponent,
     ProfessionalExperienceComponent,
-    ContactAndResumeComponent
+    ContactAndResumeComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

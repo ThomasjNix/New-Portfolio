@@ -1,2 +1,27 @@
 @import '../section-styles.scss';
-@import '/src/app/variables';
+
+.section-header {
+    margin: 2vh 0;
+    text-align: center;;
+}
+
+.contact-form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.download-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image-container {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+
+    .social-logo {
+        margin: 2vh 0;
+        width: 10rem;
+    }
+}
