@@ -1,19 +1,32 @@
-<form>
+<form [formGroup]="emailForm" (ngSubmit)="validateAndPostForm()">
     <div class="form-group">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <label for="email">First Name</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <label for="email">Last Name</label>
-                <input type="text" class="form-control">
-            </div>
+            <label for="email">
+                First Name
+            </label>
+            <input type="text" class="form-control" formControlName="firstName">
+            <span class="text-danger" *ngIf="formControlHasError('firstName', 'required')">This field is required.</span>
+            <span class="text-danger" *ngIf="formControlHasError('firstName', 'maxlength')">Please enter 20 or fewer characters.</span>
         </div>
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email">
-        <label for="comments">Your comments</label>
-        <textarea class="form-control" id="comments" rows="3"></textarea>
+        <div class="row">
+            <label for="email">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName">
+            <span class="text-danger" *ngIf="formControlHasError('lastName', 'required')">This field is required.</span>
+            <span class="text-danger" *ngIf="formControlHasError('lastName', 'maxlength')">Please enter 20 or fewer characters.</span>
+        </div>
+        <div class="row">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+            <span class="text-danger" *ngIf="formControlHasError('email', 'required')">This field is required.</span>
+            <span class="text-danger" *ngIf="formControlHasError('email', 'email')">Please enter a valid email.</span>
+            <span class="text-danger" *ngIf="formControlHasError('email', 'maxlength')">Please enter 30 or fewer characters.</span>
+        </div>
+        <div class="row">
+            <label for="comments">Your comments</label>
+            <textarea class="form-control" id="comments" rows="3" formControlName="comments"></textarea>
+            <span class="text-danger" *ngIf="formControlHasError('comments', 'required')">This field is required.</span>
+            <span class="text-danger" *ngIf="formControlHasError('comments', 'maxlength')">Please enter 200 or fewer characters.</span>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary submit-button">Send email</button>
+    <button class="btn btn-primary submit-button" type="submit">Send email</button>
 </form>
