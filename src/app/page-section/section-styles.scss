@@ -1,7 +1,7 @@
 @import '/src/app/variables';
 
 .main-section-container {
-    &.row {
+    &>.row {
         width: 100%;
     }
 }

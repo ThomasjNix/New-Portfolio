@@ -2,5 +2,8 @@
 @import './app/variables';
 
 body, html {
+    background-color: $bg-color-dark;
+    color: $light-text;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }

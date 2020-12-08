@@ -6,16 +6,6 @@
     }
 
     .main-page-section {
-        height: 80vh;
-        overflow-y: scroll;
-        padding: 2vh 2vw;
-    }
-
-    .footer-container {
-        height: 10vh;
-        bottom: 0;
-        position: absolute;
-        width: 100%;
-        background-color: $bg-color-dark;
+        padding: 0 2vw;
     }
 }

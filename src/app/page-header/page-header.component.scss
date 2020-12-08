@@ -15,14 +15,14 @@ nav.navbar {
     
             &:hover,
             &:focus {
-                color: $bg-color-light;
+                color: $light-text;
                 text-decoration: none;
             }
         }
 
         &.active {
             .nav-link {
-                color: $bg-color-light;
+                color: $light-text;
             }
         }
     }
