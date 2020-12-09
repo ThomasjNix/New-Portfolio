@@ -29,17 +29,35 @@
 
 .contact-container {
     background-color: $field-bg;
-    border: 2px solid white;
-    box-shadow: 0 0 2px white;
+    border: 2px solid $bg-color-light;
+    box-shadow: 0 0 2px $bg-color-light;
     margin-bottom: 2vh;
 
     h3 {
-        color: white;
+        color: $bg-color-light;
     }
 
     img {
-        background-color: white;
+        background-color: $bg-color-light;
         border: 1px solid $bg-color-light;
         border-radius: 25%;
+    }
+}
+
+.modal.contact-email-response-modal {
+    display: inherit;
+
+    .modal-content {
+        background-color: $bg-color-dark;
+        padding: 1em;
+        color: $light-text-grey;
+        border: 2px solid $bg-color-light;
+        box-shadow: 0 0 2px $bg-color-light;
+    }
+
+    .btn.btn-secondary {
+        background-color: $bg-color-light;
+        color: $bg-color-dark;
+        margin: 0 auto;
     }
 }

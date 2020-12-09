@@ -2,21 +2,11 @@
     <div class="col-xs-12 col-sm-6 offset-sm-3 contact-container">
         <h3 class="section-header">Contact me</h3>
         <div class="contact-form">
-            <app-contact-form></app-contact-form>
+            <app-contact-form (emailResponse)="setAndShowContactResponse($event)"></app-contact-form>
         </div>
     </div>
     <div class="col-xs-12 col-sm-6 offset-sm-3 download-container contact-container">
-        <h3 class="section-header">Download my Resume</h3>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <button class="btn btn-primary btn-lg">Download .docx</button>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <button class="btn btn-primary btn-lg">Download .pdf</button>
-            </div>
-        </div>
-        
-        
+        <h3 class="section-header">Please reach out above for a copy of my resume</h3>       
     </div>
     <div class="col-xs-12 col-sm-6 offset-sm-3 contact-container">
         <h3 class="section-header">Find me Online</h3>
@@ -35,3 +25,25 @@
     </div>
 </div>
 
+<div class="modal contact-email-response-modal" *ngIf="showModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Thank you for reaching out!</h5>
+            </div>
+            <div class="modal-body">
+              <p>I have received your message and will review it shortly.</p>
+    
+              <ul>
+                  <li>Name: {{ contactEmailData.firstName }} {{ contactEmailData.lastName }}</li>
+                  <li>Email: {{ contactEmailData.email }}</li>
+                  <li>Comments: {{contactEmailData.comments}}</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-lg" (click)="hideModal()">Close</button>
+            </div>
+          </div>
+        </div>
+      
+</div>

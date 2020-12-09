@@ -8,7 +8,7 @@ import { ProfessionalExperienceComponent } from './page-section/professional-exp
 import { ContactAndResumeComponent } from './page-section/contact-and-resume/contact-and-resume.component';
 import { ContactFormComponent } from './page-section/contact-and-resume/contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ContactEmailService } from './page-section/contact-and-resume/contact-form/contact-email.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,10 +22,10 @@ import { ContactEmailService } from './page-section/contact-and-resume/contact-f
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
-    ContactEmailService
   ],
   bootstrap: [AppComponent]
 })

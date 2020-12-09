@@ -1,21 +1,19 @@
 @import '../section-styles.scss';
 
 .main-section-container {
-    display: flex;
     h3 {
         text-align: center;;
     }
 
-    .experience-container {
-        width: 50%;
-        margin: 0 5em;
-    }
-
-    .projects-container {
-        width: 40%;
-    }
-
     .card {
-        margin: 1em 0;
+        background-color: $field-bg;
+        color: $light-text-grey;
+        margin: 2vh 0;
+
+        a {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
     }
 }

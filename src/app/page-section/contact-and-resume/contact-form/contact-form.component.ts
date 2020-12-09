@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactEmailData } from './contact-email';
 import { ContactEmailService } from './contact-email.service';
@@ -10,6 +10,7 @@ import { ContactEmailService } from './contact-email.service';
 })
 export class ContactFormComponent implements OnInit {
 
+  @Output() emailResponse: EventEmitter<ContactEmailData> = new EventEmitter<ContactEmailData>();
   emailForm = new FormGroup({
     'firstName': new FormControl('', [Validators.required, Validators.maxLength(20)]),
     'lastName': new FormControl('', [Validators.required, Validators.maxLength(20)]),
@@ -27,9 +28,8 @@ export class ContactFormComponent implements OnInit {
     this.submitClicked = true;
     if (this.emailForm.valid) {
       this.emailFormData = new ContactEmailData(this.emailForm.value);
-      this.contactEmailService.sendEmailRequest(this.emailFormData).subscribe((response) => {
-        // TODO - handle response
-        alert(response);
+      this.contactEmailService.sendEmailRequest(this.emailFormData).subscribe((response: ContactEmailData) => {
+        this.emailResponse.emit(response);
       });
     } else {
       this.emailForm.markAllAsTouched();
