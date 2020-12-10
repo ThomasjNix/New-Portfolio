@@ -1,7 +1,7 @@
 <form [formGroup]="emailForm" (ngSubmit)="validateAndPostForm()">
     <div class="form-group">
         <div class="row">
-            <label for="email">
+            <label for="firstName">
                 First Name
             </label>
             <input type="text" class="form-control" formControlName="firstName">
@@ -9,7 +9,7 @@
             <span class="text-danger" *ngIf="formControlHasError('firstName', 'maxlength')">Please enter 20 or fewer characters.</span>
         </div>
         <div class="row">
-            <label for="email">Last Name</label>
+            <label for="lastName">Last Name</label>
             <input type="text" class="form-control" formControlName="lastName">
             <span class="text-danger" *ngIf="formControlHasError('lastName', 'required')">This field is required.</span>
             <span class="text-danger" *ngIf="formControlHasError('lastName', 'maxlength')">Please enter 20 or fewer characters.</span>

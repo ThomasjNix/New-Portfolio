@@ -9,6 +9,9 @@ import { ContactAndResumeComponent } from './page-section/contact-and-resume/con
 import { ContactFormComponent } from './page-section/contact-and-resume/contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './page-section/admin/admin.component';
+import { AddExperienceComponent } from './page-section/admin/add-experience/add-experience.component';
+import { ManageExperienceComponent } from './page-section/admin/manage-experience/manage-experience.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     AboutMeComponent,
     ProfessionalExperienceComponent,
     ContactAndResumeComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    AdminComponent,
+    AddExperienceComponent,
+    ManageExperienceComponent
   ],
   imports: [
     BrowserModule,
