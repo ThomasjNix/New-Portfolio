@@ -22,6 +22,7 @@
     width: 50%;
 
     .social-logo {
+        @include hover-enlarge-glow;
         margin: 2vh 0;
         width: 10rem;
     }

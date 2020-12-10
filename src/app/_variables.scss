@@ -1,6 +1,19 @@
+//  Variables 
+
 $bg-color-dark: black;
 $bg-color-light: white;
 $light-text: white;
 $light-text-grey: #ccc;
 $dark-text-grey: #777;
 $field-bg: #333;
+
+// Mixins
+
+@mixin hover-enlarge-glow {
+    transition: all 0.25s ease-in-out;
+            
+    &:hover {
+        box-shadow: 0 0 2px 2px $bg-color-light;
+        transform: scale(1.1)
+    }
+}
