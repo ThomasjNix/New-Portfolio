@@ -21,8 +21,13 @@
     margin: 0 auto;
 
     img {
+        background-color: $bg-color-light;
+        border-radius: 15%;
+        box-shadow: 0 0 2px $bg-color-light;
+        padding: 2px;
         flex: 1;
         margin: 0 2em;
         width: 4em;
+        
     }
 }

@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './page-section/admin/admin.component';
 import { AddExperienceComponent } from './page-section/admin/add-experience/add-experience.component';
 import { ManageExperienceComponent } from './page-section/admin/manage-experience/manage-experience.component';
+import { AdminLoginComponent } from './page-section/admin/admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ManageExperienceComponent } from './page-section/admin/manage-experienc
     ContactFormComponent,
     AdminComponent,
     AddExperienceComponent,
-    ManageExperienceComponent
+    ManageExperienceComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+<div class="main-section-container row">
+    <form [formGroup]="loginForm" (ngSubmit)="validateAndPostForm()">
+        <div class="form-group">
+            <div class="row">
+                <label for="username">
+                    Username
+                </label>
+                <input type="text" class="form-control" formControlName="username">
+                <span class="text-danger" *ngIf="formControlHasError('username', 'required')">This field is required.</span>
+            </div>
+            <div class="row">
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" class="form-control" formControlName="password">
+                <span class="text-danger" *ngIf="formControlHasError('password', 'required')">This field is required.</span>
+            </div>
+        </div>
+        <button class="btn btn-primary submit-button" type="submit">Login</button>
+    </form>
+</div>
