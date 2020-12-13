@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Experience } from '../models/experience.model';
 import { LoginDetails } from './admin-login/login-details.model';
 
@@ -15,7 +16,22 @@ export class AdminService {
     return <Observable<Experience>>(this.http.post('api/admin/experience', experience));
   }
 
-  login(loginDetails: LoginDetails): Observable<boolean> {
-    return of(false);
+  login(loginDetails: LoginDetails): Observable<any> {
+    return this.http.post('api/admin/login', loginDetails)
+    .pipe(
+      map((response: any) => {
+        if (response && response.token) {
+          localStorage.setItem('access_token', response.token);
+        }
+      })
+    );
+  }
+
+  logout(): boolean {
+    localStorage.removeItem('access_token');
+    if (localStorage.getItem('access_token')) {
+      return false;
+    }
+    return true;
   }
 }

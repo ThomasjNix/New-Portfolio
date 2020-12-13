@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginDetails } from './login-details.model';
 import { AdminService } from '../admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -9,7 +10,7 @@ import { AdminService } from '../admin.service';
   styleUrls: ['./admin-login.component.scss']
 })
 export class AdminLoginComponent implements OnInit {
-
+    loginFailure = false;
   loginForm = new FormGroup({
     'username': new FormControl('', [Validators.required]),
     'password': new FormControl('', [Validators.required]),
@@ -19,7 +20,7 @@ export class AdminLoginComponent implements OnInit {
     password: ''
   });
   submitClicked = false;
-  constructor(private adminService: AdminService) { }
+  constructor(private adminService: AdminService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +30,13 @@ export class AdminLoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.loginFormData = new LoginDetails(this.loginForm.value);
       this.adminService.login(this.loginFormData).subscribe((response: boolean) => {
-        console.log(response);
+        if (response) {
+          this.router.navigate(['/admin']);
+        } else {
+          this.router.navigate(['/']);
+        }
+      }, () => {
+        this.loginFailure = true;
       });
     } else {
       this.loginForm.markAllAsTouched();

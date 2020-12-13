@@ -1,21 +1,29 @@
 <div class="main-section-container row">
-    <form [formGroup]="loginForm" (ngSubmit)="validateAndPostForm()">
-        <div class="form-group">
-            <div class="row">
-                <label for="username">
-                    Username
-                </label>
-                <input type="text" class="form-control" formControlName="username">
-                <span class="text-danger" *ngIf="formControlHasError('username', 'required')">This field is required.</span>
-            </div>
-            <div class="row">
-                <label for="password">
-                    Password
-                </label>
-                <input type="password" class="form-control" formControlName="password">
-                <span class="text-danger" *ngIf="formControlHasError('password', 'required')">This field is required.</span>
+    <div class="col-xs-12 col-sm-6 offset-sm-3 contact-container">
+        <h3 class="section-header">Login</h3>
+        <div class="contact-form">
+            <div class="main-section-container row">
+                <p class="text-danger" *ngIf="loginFailure">Failed to validate login credentials, please try again.</p>
+                <form [formGroup]="loginForm" (ngSubmit)="validateAndPostForm()">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="username">
+                                Username
+                            </label>
+                            <input type="text" class="form-control" formControlName="username">
+                            <span class="text-danger" *ngIf="formControlHasError('username', 'required')">This field is required.</span>
+                        </div>
+                        <div class="row">
+                            <label for="password">
+                                Password
+                            </label>
+                            <input type="password" class="form-control" formControlName="password">
+                            <span class="text-danger" *ngIf="formControlHasError('password', 'required')">This field is required.</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary submit-button" type="submit">Login</button>
+                </form>
             </div>
         </div>
-        <button class="btn btn-primary submit-button" type="submit">Login</button>
-    </form>
+    </div>
 </div>
