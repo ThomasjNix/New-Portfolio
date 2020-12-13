@@ -1,1 +1,17 @@
-<p>manage-experience works!</p>
+<div class="main-section-container row">
+    <div class="col-xs-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+        <h3>Remove Experiences</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-xl-3" *ngFor="let experience of experienceList;">
+                <div class="card experience-card" >
+                    <img class="card-img-top" src="{{ experience.imageSrc }}" alt="{{ experience.imageSrc }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ experience.title }}</h5>
+                        <p class="card-text">{{ experience.description.substr(0, 20) + '...' }}</p>
+                        <a (click)="deleteRecord(experience._id)" class="btn btn-link btn-primary">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

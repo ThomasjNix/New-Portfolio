@@ -1,0 +1,23 @@
+@import '../../section-styles.scss';
+
+.main-section-container {
+    h3 {
+        text-align: center;;
+    }
+
+    .card {
+        background-color: $field-bg;
+        color: $light-text-grey;
+        margin: 2vh 0;
+
+        a {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        &.experience-card {
+            @include hover-enlarge-glow;
+        }
+    }
+}

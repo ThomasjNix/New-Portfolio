@@ -11,9 +11,9 @@ import { AdminService } from '../admin.service';
 export class AddExperienceComponent implements OnInit {
 
   experienceForm = new FormGroup({
-    'title': new FormControl('', [Validators.required, Validators.maxLength(20)]),
-    'imageName': new FormControl('', [Validators.required, Validators.maxLength(20)]),
-    'description': new FormControl('', [Validators.required, Validators.maxLength(500)]),
+    'title': new FormControl('', [Validators.required]),
+    'imageSrc': new FormControl('', [Validators.required]),
+    'description': new FormControl('', [Validators.required]),
   });
   experienceFormData = new Experience({});
   submitClicked = false;
@@ -27,7 +27,9 @@ export class AddExperienceComponent implements OnInit {
     if (this.experienceForm.valid) {
       this.experienceFormData = new Experience(this.experienceForm.value);
       this.adminService.addNewExperience(this.experienceFormData).subscribe((response: Experience) => {
-        console.log(response);
+        if (response) {
+          this.adminService.alertExperienceAdded(response);
+        }
       });
     } else {
       this.experienceForm.markAllAsTouched();

@@ -7,21 +7,18 @@
                 </label>
                 <input type="text" class="form-control" formControlName="title">
                 <span class="text-danger" *ngIf="formControlHasError('title', 'required')">This field is required.</span>
-                <span class="text-danger" *ngIf="formControlHasError('title', 'maxlength')">Please enter 20 or fewer characters.</span>
             </div>
             <div class="row">
-                <label for="imageName">
+                <label for="imageSrc">
                     Image name (including extension)
                 </label>
-                <input type="text" class="form-control" formControlName="imageName">
-                <span class="text-danger" *ngIf="formControlHasError('imageName', 'required')">This field is required.</span>
-                <span class="text-danger" *ngIf="formControlHasError('imageName', 'maxlength')">Please enter 20 or fewer characters.</span>
+                <input type="text" class="form-control" formControlName="imageSrc">
+                <span class="text-danger" *ngIf="formControlHasError('imageSrc', 'required')">This field is required.</span>
             </div>
             <div class="row">
                 <label for="comments">Description</label>
                 <textarea class="form-control" id="comments" rows="3" formControlName="description"></textarea>
                 <span class="text-danger" *ngIf="formControlHasError('description', 'required')">This field is required.</span>
-                <span class="text-danger" *ngIf="formControlHasError('description', 'maxlength')">Please enter 200 or fewer characters.</span>
             </div>
         </div>
         <button class="btn btn-primary submit-button" type="submit">Add experience</button>

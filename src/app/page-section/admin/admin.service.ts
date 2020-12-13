@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Experience } from '../models/experience.model';
 import { LoginDetails } from './admin-login/login-details.model';
@@ -9,7 +9,7 @@ import { LoginDetails } from './admin-login/login-details.model';
   providedIn: 'root'
 })
 export class AdminService {
-
+  experienceAddSubject = new Subject<Experience>();
   constructor(private http: HttpClient) { }
 
   addNewExperience(experience: Experience): Observable<Experience> {
@@ -33,5 +33,13 @@ export class AdminService {
       return false;
     }
     return true;
+  }
+
+  alertExperienceAdded(experience: Experience): void {
+    this.experienceAddSubject.next(experience);
+  }
+
+  getExperienceAddSubject(): Subject<Experience> {
+    return this.experienceAddSubject;
   }
 }
