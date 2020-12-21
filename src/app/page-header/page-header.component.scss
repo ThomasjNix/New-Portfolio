@@ -27,6 +27,15 @@ nav.navbar {
         }
     }
 
+    .navbar-toggler {
+        position: absolute;
+        top: 5vh;
+    }
+
+    #navbarNav {
+        width: 90vw;
+    }
+
     &.navbar-dark.bg-dark {
         background-color: $bg-color-dark !important; // override bootstrap
     }
