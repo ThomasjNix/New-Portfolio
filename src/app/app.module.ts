@@ -14,6 +14,7 @@ import { AddExperienceComponent } from './page-section/admin/add-experience/add-
 import { ManageExperienceComponent } from './page-section/admin/manage-experience/manage-experience.component';
 import { AdminLoginComponent } from './page-section/admin/admin-login/admin-login.component';
 import { AuthInterceptor } from './auth.interceptor';
+import { SingleExperienceComponent } from './page-section/professional-experience/single-experience/single-experience.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AuthInterceptor } from './auth.interceptor';
     AdminComponent,
     AddExperienceComponent,
     ManageExperienceComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    SingleExperienceComponent
   ],
   imports: [
     BrowserModule,

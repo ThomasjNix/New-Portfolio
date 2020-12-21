@@ -9,7 +9,7 @@
                     <div class="card-body">
                     <h5 class="card-title">{{ experience.title }}</h5>
                     <p class="card-text">{{ experience.description.substr(0, 20) + '...' }}</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <a (click)="navToSingleExperience(experience._id)" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>

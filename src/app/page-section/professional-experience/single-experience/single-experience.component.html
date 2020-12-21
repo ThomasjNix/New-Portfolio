@@ -1,0 +1,12 @@
+<div class="main-section-container" *ngIf="experienceLoaded">
+    <div class="row">
+        <div class="col-xs-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+            <img src="{{ experience.imageSrc }}" alt="{{ experience.imageSrc }}">
+            <h3>{{ experience.title }}</h3>
+            <p>{{ experience.description }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary" (click)="navOnLoadFail()">Back to all</button>
+    </div>    
+</div>
